@@ -41,3 +41,11 @@ plugin_vendor.so:
 plugin_mod.so:
 	cd plugin_mod && $(MAKE)
 	cp plugin_mod/$@ $@
+
+#------------------------------------------------------------------
+# Clean
+#------------------------------------------------------------------
+.PHONY: clean
+clean:
+	find . -name "*.so" -type f -delete
+	find . -name "*.txt" -type f -delete
